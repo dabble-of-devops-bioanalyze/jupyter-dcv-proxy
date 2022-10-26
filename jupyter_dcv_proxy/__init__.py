@@ -35,7 +35,11 @@ def get_system_user():
 
 def setup_dcv():
     def _get_env(port):
-        return dict(PORT=port, NB_USER=get_system_user(), SESSION_ID=str(uuid.uuid4()))
+        return dict(
+            PORT=str(port),
+            NB_USER=get_system_user(),
+            SESSION_ID=str(uuid.uuid4())
+        )
 
     def _get_cmd(port):
         dcv_exec = get_dcv_executable("dcv")
