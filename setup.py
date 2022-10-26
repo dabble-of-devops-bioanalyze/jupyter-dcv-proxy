@@ -1,8 +1,11 @@
+from setuptools import setup, find_packages
 import setuptools
+import versioneer
 
 setuptools.setup(
     name="jupyter-dcv-proxy",
-    version="2.0.2",
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     url="https://github.com/dabble-of-devops-bioanalyze/jupyter-dcv-proxy",
     author="Jillian Rowe",
     description="Jupyter extension to proxy DCV",
