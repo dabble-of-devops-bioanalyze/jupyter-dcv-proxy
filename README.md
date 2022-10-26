@@ -3,7 +3,7 @@
 **jupyter-dcv-proxy** provides Jupyter server and notebook extensions to proxy DCV.
 
 This is useful for desktop only applications such as [QuPath](https://github.com/qupath/qupath)
-and [CellProfiler](https://cellprofiler.org/).
+and [CellProfiler](https://cellprofiler.org/) and web browsers.
 
 ## Installation
 
