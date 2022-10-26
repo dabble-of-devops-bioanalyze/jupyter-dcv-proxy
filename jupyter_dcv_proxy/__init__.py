@@ -39,15 +39,17 @@ def setup_dcv():
 
 def setup_dcv():
     def _get_env(port):
-        return {
-        }
+        return dict(
+            PORT=port,
+            NB_USER=get_system_user(),
+            SESSION_ID=str(uuid.uuid4())
+        )
 
     def _get_cmd(port):
-        session_id = str(uuid.uuid4())
-        user = get_system_user()
         dcv_exec = get_dcv_executable('dcv')
         configurable_http_proxy_command = get_dcv_executable('configurable-http-proxy')
-        command = f"""{dcv_exec} create-session --owner {user} {session_id}; {configurable_http_proxy_command} --port {port} --default-target=https://localhost:8443 --insecure --log-level=debug"""
+        this_dir = os.path.abspath(os.path.dirname(__file__))
+        command = f"""bash {this_dir}/run-dcv-user-session.sh"""
         return command.split(" ")
 
     return {

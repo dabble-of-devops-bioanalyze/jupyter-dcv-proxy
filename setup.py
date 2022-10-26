@@ -9,6 +9,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     keywords=['Jupyter'],
     classifiers=['Framework :: Jupyter'],
+    scripts=['jupyter_dcv_proxy/run-dcv-user-session.sh'],
     install_requires=[
         'jupyter-server-proxy>=3.2.0'
     ],
