@@ -51,5 +51,9 @@ def setup_dcv():
     return {
         "command": _get_cmd,
         "environment": _get_env,
-        "launcher_entry": {"title": "DCV", "icon_path": get_icon_path()},
+        "launcher_entry": {
+            "title": "DCV",
+            # the icon doesn't display
+            # "icon_path": get_icon_path()
+        },
     }
