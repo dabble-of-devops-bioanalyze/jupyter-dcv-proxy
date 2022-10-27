@@ -17,6 +17,7 @@ setuptools.setup(
     classifiers=["Framework :: Jupyter"],
     install_requires=["jupyter-server-proxy>=3.2.0"],
     entry_points={"jupyter_serverproxy_servers": ["dcv = jupyter_dcv_proxy:setup_dcv"]},
+    include_package_data=True,
     package_data={
         "jupyter_dcv_proxy": ["icons/dcv.svg", "run-dcv-user-session.sh"],
     },

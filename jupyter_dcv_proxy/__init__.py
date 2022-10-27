@@ -4,10 +4,6 @@ import pwd
 import shutil
 import uuid
 
-from . import _version
-
-__version__ = _version.get_versions()["version"]
-
 
 def get_dcv_executable(prog):
     if shutil.which(prog):
@@ -57,3 +53,8 @@ def setup_dcv():
             # "icon_path": get_icon_path()
         },
     }
+
+
+from . import _version
+
+__version__ = _version.get_versions()['version']
