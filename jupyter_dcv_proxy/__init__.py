@@ -45,6 +45,7 @@ def setup_dcv():
     return {
         "command": _get_cmd,
         "environment": _get_env,
+        "timeout": 120,
         "launcher_entry": {
             "title": "DCV",
             # the icon doesn't display
@@ -56,6 +57,3 @@ def setup_dcv():
 from . import _version
 
 __version__ = _version.get_versions()["version"]
-
-from . import _version
-__version__ = _version.get_versions()['version']
