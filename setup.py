@@ -37,7 +37,7 @@ setup(
     license="Apache Software License 2.0",
     long_description=readme + "\n\n" + history,
     keywords="jupyter_dcv_proxy",
-    name="jupyter_dcv_proxy",
+    name="jupyter-dcv-proxy",
     packages=find_packages(include=["jupyter_dcv_proxy", "jupyter_dcv_proxy.*"]),
     test_suite="tests",
     tests_require=test_requirements,
