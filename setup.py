@@ -14,6 +14,7 @@ with open("HISTORY.rst") as history_file:
 test_requirements = []
 
 setup(
+    name="jupyter-dcv-proxy",
     author="Jillian Rowe",
     author_email="jillian@dabbleofdevops.com",
     python_requires=">=3.6",
@@ -37,7 +38,6 @@ setup(
     license="Apache Software License 2.0",
     long_description=readme + "\n\n" + history,
     keywords="jupyter_dcv_proxy",
-    name="jupyter-dcv-proxy",
     packages=find_packages(include=["jupyter_dcv_proxy", "jupyter_dcv_proxy.*"]),
     test_suite="tests",
     tests_require=test_requirements,
