@@ -45,7 +45,7 @@ def setup_dcv():
     return {
         "command": _get_cmd,
         "environment": _get_env,
-        "timeout": 120,
+        "timeout": 5000,
         "launcher_entry": {
             "title": "DCV",
             # the icon doesn't display
