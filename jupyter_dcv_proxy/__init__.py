@@ -39,7 +39,9 @@ def setup_dcv():
         dcv_exec = get_dcv_executable("dcv")
         configurable_http_proxy_command = get_dcv_executable("configurable-http-proxy")
         this_dir = os.path.abspath(os.path.dirname(__file__))
-        command = f"""bash {this_dir}/run-dcv-user-session.sh"""
+        command_file = os.path.join(this_dir, "run-dcv-user-session.sh")
+        assert os.path.exists(command_file)
+        command = f"""bash {command_file}"""
         return command.split(" ")
 
     return {
